@@ -13,4 +13,4 @@ def artists(request):
 
 
 def artistdetails(request, name):
-    a=2
+    a=3
