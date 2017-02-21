@@ -9,7 +9,9 @@
 <ul>
     {% for artist in artists %}
         <li>
+        <a href="/artists/{{ artist.id }}">
             {{ artist.name }}
+        </a>
         </li>
     {% endfor %}
 </ul>

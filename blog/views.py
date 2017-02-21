@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from blog.models import *
 # Create your views here.
 
@@ -12,5 +12,16 @@ def artists(request):
     return render_to_response("blog/artists.html", {"artists": artists})
 
 
-def artistdetails(request, name):
-    a=3
+def artistCreate(request):
+    if request.method == "GET":
+        form = ArtistForm()
+        return render(request, 'blog/artistcreate.html', {'form':form})
+    elif request.method == "POST":
+        form = ArtistForm(request.POST)
+        form.save()
+        return HttpResponseRedirect('/artists')
+
+
+def artistdetails(request, id):
+    artist = Artist.objects.get(pk=id)
+    return render_to_response("blog/artistdetails.html", {"artist": artist})

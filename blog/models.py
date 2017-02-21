@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.forms import ModelForm
 # Create your models here.
 class Artist(models.Model):
     name = models.CharField("artist", max_length=50)
@@ -11,3 +11,8 @@ class Artist(models.Model):
 class Album(models.Model):
     name = models.CharField("album", max_length=50)
     artist = models.ForeignKey(Artist)
+
+class ArtistForm(ModelForm):
+    class Meta:
+        model = Artist
+        fields = ['name', 'year_formed']
