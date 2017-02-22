@@ -1,10 +1,11 @@
 from django.shortcuts import render, render_to_response
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from blog.models import *
+
 # Create your views here.
 
 def home(request):
-    return render_to_response("blog/coverTemplate.html")
+    return render_to_response("blog/home.html")
 
 
 def artists(request):
