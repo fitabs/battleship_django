@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Artists</title>
-</head>
-<body>
+{% extends "blog/coverTemplate.html" %}
+
+{% block content %}
+
+
 <h2>All Artists</h2>
 <ul>
     {% for artist in artists %}
@@ -15,5 +13,6 @@
         </li>
     {% endfor %}
 </ul>
-</body>
-</html>
+
+
+{% endblock %}

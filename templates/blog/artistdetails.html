@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Artist Details</title>
-</head>
-<body>
+{% extends "blog/coverTemplate.html" %}
+
+{% block content %}
+
+
 <h2>{{ artist.name }}</h2>
 <h3>Year formed: {{ artist.year_formed }}</h3>
-</body>
-</html>
+
+
+{% endblock %}

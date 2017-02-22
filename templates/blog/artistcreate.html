@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Artist Create</title>
-</head>
-<body>
+{% extends "blog/coverTemplate.html" %}
+
+{% block content %}
 
 <form method="post">
     {% csrf_token %}
@@ -12,5 +8,5 @@
     <button type="submit">Сохранить</button>
 </form>
 
-</body>
-</html>
+
+{% endblock %}
