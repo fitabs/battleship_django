@@ -4,7 +4,7 @@ from blog.models import *
 # Create your views here.
 
 def home(request):
-    return render_to_response("blog/home.html")
+    return render_to_response("blog/coverTemplate.html")
 
 
 def artists(request):
