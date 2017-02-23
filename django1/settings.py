@@ -25,7 +25,10 @@ SECRET_KEY = 'kye6-0&90!fv&5p7&5jp^gg#gphj395amcss0@1_2z8+!syf66'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fitabs.pythonanywhere.com',]
+ALLOWED_HOSTS = [
+    'fitabs.pythonanywhere.com',
+    '127.0.0.1',
+]
 
 
 # Application definition
