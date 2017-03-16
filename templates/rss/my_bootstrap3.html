@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load bootstrap3 %}
+<html{% if LANGUAGE_CODE %} lang="{{ LANGUAGE_CODE }}"{% endif %}>
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block bootstrap3_title %}django-bootstrap3 template title{% endblock %}</title>
+    {% bootstrap_css %}
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {% if 'javascript_in_head'|bootstrap_setting %}{% bootstrap_javascript jquery=True %}{% endif %}
+    {% block bootstrap3_extra_head %}{% endblock %}
+    {% load static %}
+    <link href={% static "rss/style.css" %} type="text/css" rel="stylesheet">
+    <link href={% static "rss/fontawesome/css/font-awesome.css" %} type="text/css" rel="stylesheet">
+    <link href={% static "rss/bootstrapfies/css/bootstrap.css" %} type="text/css" rel="stylesheet">
+</head>
+
+<body>
+{% block bootstrap3_content %}django-bootstrap3 template content{% endblock %}
+{% if not 'javascript_in_head'|bootstrap_setting %}{% bootstrap_javascript jquery=True %}{% endif %}
+{% block bootstrap3_extra_script %}{% endblock %}
+
+    <div class="container" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="border: solid 1px #000000"></div>
+            <br><br><br>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="border: solid 1px #16a80d"></div>
+            <br><br><br>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="border: solid 1px #0058ff"></div>
+            <br><br><br>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="border: solid 1px #ff0500"></div>
+            <br><br><br>
+        </div>
+
+    </div>
+
+
+</body>
+ <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</html>
+
+
+
