@@ -20,7 +20,7 @@ def artistCreate(request):
     elif request.method == "POST":
         form = ArtistForm(request.POST)
         form.save()
-        return HttpResponseRedirect('/artists')
+        return HttpResponseRedirect('/blog/artists')
 
 
 def artistdetails(request, id):

@@ -8,7 +8,7 @@
 <ul>
     {% for artist in artists %}
         <li>
-        <a href="/artists/{{ artist.id }}">
+        <a href="/blog/artists/{{ artist.id }}">
             {{ artist.name }}
         </a>
         </li>
@@ -23,14 +23,14 @@
     <div class="card mb-3">
   <img class="card-img-top" src="{% static "img/album.png" %}" alt="Card image cap">
   <div class="card-block">
-    <h4 class="card-title"><a href="/artists/create">Create New Artist</a></h4>
+    <h4 class="card-title"><a href="/blog/artists/create">Create New Artist</a></h4>
     <p class="card-text">This is card with supporting form to create new artist.</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
 </div>
 <div class="card">
   <div class="card-block">
-    <h4 class="card-title"><a href="">Home</a></h4>
+    <h4 class="card-title"><a href="/blog">Home</a></h4>
     <p class="card-text">Go to homepage</p>
     <p class="card-text"><small class="text-muted">Last updated 228 mins ago</small></p>
   </div>

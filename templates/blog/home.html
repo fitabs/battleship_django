@@ -5,25 +5,25 @@
 
 
 <h1> Home </h1>
-<h4><a href="/artists">All Artists</a></h4>
-<h4><a href="/artists/create">Create New Artist</a></h4>
+<h4><a href="/blog/artists">All Artists</a></h4>
+<h4><a href="/blog/artists/create">Create New Artist</a></h4>
 
 
-    {% endblock %}
-    {% block footer %}
+{% endblock %}
+{% block footer %}
 
 
     <div class="card mb-3">
   <img class="card-img-top" src="{% static "img/artist_yellow.jpg" %}" alt="Card image cap">
   <div class="card-block">
-    <h4 class="card-title"><a href="/artists">All Artists</a></h4>
+    <h4 class="card-title"><a href="/blog/artists">All Artists</a></h4>
     <p class="card-text">This is a wider card with all artists in database project.</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
 </div>
 <div class="card">
   <div class="card-block">
-    <h4 class="card-title"><a href="/artists/create">Create New Artist</a></h4>
+    <h4 class="card-title"><a href="/blog/artists/create">Create New Artist</a></h4>
     <p class="card-text">This is card with supporting form to create new artist.</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
